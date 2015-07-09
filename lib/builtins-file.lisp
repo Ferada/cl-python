@@ -135,6 +135,13 @@
 	(py-raise '{StopIteration} "File reading finished.")
       line)))
 
+(def-py-method py-file.__enter__ (f)
+  (ensure-open-file f)
+  f)
+
+(def-py-method py-file.__exit__ (f exc-type exc-value traceback)
+  (py-file.close f))
+
 (def-py-method py-file.read (f^ &optional size^)
   ;; Read at most size bytes from the file (less if the read hits EOF
   ;; before obtaining size bytes). If the size argument is negative or
