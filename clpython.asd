@@ -73,9 +73,9 @@
     :components ((:module "runtime"
                           :serial t
                           :components ((:file "rsetup"       )
-                                       (:file "formatstring" )
                                        (:file "metaclass"    )
                                        (:file "dictattr"     )
+                                       (:file "formatstring" )
                                        (:file "classes"      )
                                        (:file "exceptions"   )
                                        (:file "habitat"      )

@@ -1341,7 +1341,6 @@ Basically the Python equivalent of ENSURE-CLASS."
 
 (def-py-method py-type.__nonzero__ (cls)
   ;; to make e.g. "if str: ..." work
-  (declare (ignore cls))
   +the-true+)
 
 (def-py-method py-type.__dict__ :attribute-read (cls)
